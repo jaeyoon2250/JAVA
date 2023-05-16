@@ -43,7 +43,7 @@ public class gameproject {
 		String c = "찌르기", d = "찌르기공격";
 
 		System.out.printf("몬스터의 HP는 %d 입니다, 몬스터는 5턴마다 HP를 %d 씩 회복합니다.\n", mhp, healing);
-        System.out.printf("플레이어가 취할수 있는 액션은 공격력 %d 의 마법 공격과 공격력 %d 의 찌르기 공격이 있습니다.\n", ap, ad);
+        System.out.printf("플레이어가 취할수 있는 동작은 공격력 %d 의 마법 공격과 공격력 %d 의 찌르기 공격이 있습니다.\n", ap, ad);
 		do{
 			System.out.printf("몬스터의 현재 체력은 %d 입니다.\n", mhp);
 			action = "";
