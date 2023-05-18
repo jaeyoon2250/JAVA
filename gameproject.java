@@ -61,12 +61,7 @@ public class gameproject {
 			System.out.print("어떤 동작을 취하시겠습니까?: ");
 			action = input.nextLine(); // 취할 동작을 입력받는다
 			if (action.equals(typing[0]) || action.equals(typing[1])) {
-				// 몬스터에게 피해를 입히고 몇턴이 지났는지를 알려줌
-				// 마법피해를 줄 경우
-				System.out.printf("몬스터에게 %d 의 마법 피해를 입혔습니다\n", ap);
-				turn++;
-				System.out.printf("%d 턴 지났습니다\n", turn);
-				mhp -= ap;
+				
 				// 5턴마다 몬스터가 체력을 2만큼 회복한다
 				if (turn % 5 == 0) {
 					System.out.printf("%d 턴이 지나 몬스터가 체력을 %d 회복합니다.\n", turn, healing);
@@ -90,5 +85,21 @@ public class gameproject {
 			}
 		} while (mhp > 0); // 몬스터의 체력이 0이 되기 전까지 while 문 반복 실행
 		input.close();
+	}
+
+	public static int attackap(int monsterhp){
+		int ap = 3, mhp = monsterhp, turn = 0;
+		// 몬스터에게 피해를 입히고 몇턴이 지났는지를 알려줌
+		// 마법피해를 줄 경우
+		System.out.printf("몬스터에게 %d 의 마법 피해를 입혔습니다\n", ap);
+		mhp -= ap;
+		turn++;
+		System.out.printf("%d 턴 지났습니다\n", turn);
+
+		return mhp;
+	}
+
+	public static void heal(){
+
 	}
 }
