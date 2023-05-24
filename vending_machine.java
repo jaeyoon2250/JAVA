@@ -33,8 +33,7 @@ public class vending_machine {
                     state[1][0] -= 1;
                     input -= state[0][0];
                 }
-            }
-            else if (menu == 2) {
+            } else if (menu == 2) {
                 if (input < state[0][1]) {
                     fail(input);
                 } else {
@@ -42,8 +41,7 @@ public class vending_machine {
                     state[1][1] -= 1;
                     input -= state[0][1];
                 }
-            }
-            else if (menu == 3) {
+            } else if (menu == 3) {
                 if (input < state[0][2]) {
                     fail(input);
                 } else {
@@ -51,8 +49,7 @@ public class vending_machine {
                     state[1][2] -= 1;
                     input -= state[0][2];
                 }
-            }
-            else if (menu == 4) {
+            } else if (menu == 4) {
                 if (input < state[0][3]) {
                     fail(input);
                 } else {
@@ -60,11 +57,9 @@ public class vending_machine {
                     state[1][3] -= 1;
                     input -= state[0][3];
                 }
-            }
-            else if(menu == 5){
+            } else if (menu == 5) {
                 break;
-            }
-            else {
+            } else {
                 success(input, state, menu);
             }
 
@@ -75,27 +70,23 @@ public class vending_machine {
 
     public static void success(int input, int[][] state, int menu) {
         String[] menupan = { "콜라", "사이다", "환타", "펩시" };
-        if(menu == 1){
+        if (menu == 1) {
             System.out.printf("%s가 나왔습니다, %d원 입니다.\n", menupan[0], state[0][0]);
             input -= state[0][0];
             System.out.printf("현재 남은 잔돈은 %d원 입니다.\n", input);
-        }
-        else if(menu == 2){
+        } else if (menu == 2) {
             System.out.printf("%s가 나왔습니다, %d원 입니다.\n", menupan[1], state[0][1]);
             input -= state[0][1];
             System.out.printf("현재 남은 잔돈은 %d원 입니다.\n", input);
-        }  
-        else if(menu == 3){
+        } else if (menu == 3) {
             System.out.printf("%s가 나왔습니다, %d원 입니다.\n", menupan[2], state[0][2]);
             input -= state[0][2];
             System.out.printf("현재 남은 잔돈은 %d원 입니다.\n", input);
-        }      
-        else if(menu == 4){
+        } else if (menu == 4) {
             System.out.printf("%s가 나왔습니다, %d원 입니다.\n", menupan[3], state[0][3]);
             input -= state[0][3];
             System.out.printf("현재 남은 잔돈은 %d원 입니다.\n", input);
-        }
-        else{
+        } else {
             System.out.println("잘못된 숫자를 입력하셨습니다.");
         }
     }
