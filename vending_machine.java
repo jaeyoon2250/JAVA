@@ -15,10 +15,13 @@ public class vending_machine {
             input += scan.nextInt();
             System.out.printf("현재 넣으신 돈은 %d 입니다.\n\n", input); // 입력받은 금액을 알려줌
             System.out.println("메뉴를 선택해 주십시오.");
-            System.out.printf("1. %s / %d원 / %d개 보유\n", menupan[0], state[0][0], state[1][0]);
-            System.out.printf("2. %s / %d원 / %d개 보유\n", menupan[1], state[0][1], state[1][1]);
-            System.out.printf("3. %s / %d원 / %d개 보유\n", menupan[2], state[0][2], state[1][2]);
-            System.out.printf("4. %s / %d원 / %d개 보유\n", menupan[3], state[0][3], state[1][3]);
+            // System.out.printf("1. %s / %d원 / %d개 보유\n", menupan[0], state[0][0], state[1][0]);
+            // System.out.printf("2. %s / %d원 / %d개 보유\n", menupan[1], state[0][1], state[1][1]);
+            // System.out.printf("3. %s / %d원 / %d개 보유\n", menupan[2], state[0][2], state[1][2]);
+            // System.out.printf("4. %s / %d원 / %d개 보유\n", menupan[3], state[0][3], state[1][3]);
+            for(int i = 0; i < 4; i++){
+                System.out.printf("%d. %s / %d원 / %d개 보유\n", i+1, menupan[i], state[i-i][i], state[i-i+1][i]);
+            }
             System.out.println("숫자 5를 입력하시면 자판기가 종료됩니다.");
             System.out.println("재고가 없을 시 판매가 중단됩니다.");
             System.out.printf("현재 보유중인 돈은 %d원 입니다.\n", input); // 현재 보유중인 돈을 알려줌
