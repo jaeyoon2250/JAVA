@@ -59,6 +59,7 @@ public class vending_machine {
 
         } while (menu != 5);
         System.out.println("자판기를 종료합니다."); // 메뉴 변수에 5 값을 입력받으면 while문 정지와 함께 프로그램 종료
+        System.out.printf("잔돈 %d원이 반환됩니다.", input);
         scan.close();
     }
 
