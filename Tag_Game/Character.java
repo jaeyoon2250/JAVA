@@ -8,8 +8,6 @@ abstract class Character {
     String howatk;
     int def;
     int hp;
-
-    abstract void attack();
 }
 
 class Wizard extends Character implements Tagging {
@@ -48,11 +46,11 @@ class Warrior extends Character implements Tagging {
     }
 }
 
-class Monster extends Character {
+class Monster extends Character implements Tagging {
     int react;
-    Monster (String name, int atk, String howatk, int def, int hp) {
+    Monster (String name, String howatk, int def, int hp) {
         this.name = name;
-        this.atk = atk;
+        this.atk = react;
         this.howatk = howatk;
         this.def = def;
         this.hp = hp;
